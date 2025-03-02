@@ -2,6 +2,10 @@ name: Docker Build
 
 on: [push, workflow_dispatch]
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/pythonapp
+
 jobs:
   DockerBuildPublish:
     runs-on: ubuntu-latest
